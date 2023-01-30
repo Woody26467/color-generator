@@ -12,35 +12,35 @@
   </head>
   <body>
     <header>
-      <section class="main-section">
-        <div class="logo">
-          <img src="images/Colour Wizard Logo.png" />
+      <nav>
+        <div class="logo-container">
+          <img
+            src="images/Colour Wizard Logo.png"
+            alt="logo"
+            class="logo"
+          />
+          <button id="dropdown-button">Menu</button>
         </div>
-        <div class="button-container">
-          <div class="color-button-container">
-            <button class="shades-button">Shades</button>
-            <button id="complementary" class="color-button">
-              Complementary
-            </button>
-            <button id="split" class="color-button">
-              Split Complementary
-            </button>
-            <button id="triadic" class="color-button">Triadic</button>
-            <button id="tetradic" class="color-button">
-              Tetradic
-            </button>
-            <button id="analogous" class="color-button">
-              Analogous
-            </button>
-          </div>
+        <div class="nav-button-container hidden">
+          <button class="shades-button">Shades</button>
+          <button id="complementary" class="color-button">
+            Complementary
+          </button>
+          <button id="split" class="color-button">
+            Split Complementary
+          </button>
+          <button id="triadic" class="color-button">Triadic</button>
+          <button id="tetradic" class="color-button">Tetradic</button>
+          <button id="analogous" class="color-button">
+            Analogous
+          </button>
+          <button id="spawn-button">Random Colours</button>
         </div>
-        <button id="spawn-button">get spawning!</button>
-      </section>
+      </nav>
       <section class="sub-section">
         <p>
-          Press the 'get spawning' button to spawn new random colors,
-          or press the purple buttons above to get different harmonies
-          of colors
+          Choose a button to display new colors, each of the purple
+          buttons above gives you different harmonies of colors
         </p>
       </section>
     </header>

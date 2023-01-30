@@ -6,8 +6,20 @@ const splitButton = document.querySelector('#split')
 const triadicButton = document.querySelector('#triadic')
 const tetradicButton = document.querySelector('#tetradic')
 const analogousButton = document.querySelector('#analogous')
+const dropdownBtn = document.querySelector('#dropdown-button')
+const dropdownList = document.querySelector('.nav-button-container')
+
+async function copyValue(value) {
+  await navigator.clipboard.writeText(value)
+  alert('Copied to Clipboard')
+}
 
 let colorBlocks = ['', '', '', '', '']
+
+//* Toggle responsive nav class
+function toggle() {
+  dropdownList.classList.toggle('hidden')
+}
 
 //********** Color Conversion Functions **********/
 
@@ -287,3 +299,10 @@ splitButton.addEventListener('click', split)
 triadicButton.addEventListener('click', triadic)
 tetradicButton.addEventListener('click', tetradic)
 analogousButton.addEventListener('click', analogous)
+dropdownBtn.addEventListener('click', toggle)
+colorsContainers.addEventListener('click', event => {
+  if (event.target.tagName === 'P') {
+    console.log(event.target.innerText)
+    copyValue(event.target.innerText)
+  }
+})
