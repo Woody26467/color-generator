@@ -178,8 +178,11 @@ function createColorBlock(colorBlock, widthPercent) {
   hexCode = convertRGBtoHex(rgbCode)
   const divElement = document.createElement('div')
   const pRGBElement = document.createElement('p')
+  pRGBElement.id = 'pRGBElement'
   const pHexElement = document.createElement('p')
+  pHexElement.id = 'pHexElement'
   const pHSLElement = document.createElement('p')
+  pHSLElement.id = 'pHSLElement'
   divElement.style.backgroundColor = colorBlock
   divElement.style.width = widthPercent
   pRGBElement.textContent = rgbCode
